@@ -29,22 +29,27 @@ public class InputMonitoring : MonoBehaviour
         Vector3 inputVector = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
+            Debug.Log("User input: forward");
             inputVector += Vector3.forward;       
         }
          if (Input.GetKey(KeyCode.A))
         {
+            Debug.Log("User input: left");
             inputVector += Vector3.left;
         }
          if (Input.GetKey(KeyCode.S))
         {
+            Debug.Log("User input: back");
             inputVector += Vector3.back;
         }
          if (Input.GetKey(KeyCode.D))
         {
+            Debug.Log("User input: right");
             inputVector += Vector3.right;
         }
        if (Input.GetKeyDown(KeyCode.Space) && isTouchingPlane)
         {
+            Debug.Log("User input: jump");
             inputVector += Vector3.up; 
         }
         OnMove?.Invoke(inputVector);
